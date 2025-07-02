@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Український Вечір у Лодзі</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="language-switcher">
+    <button onclick="switchLang('uk')">UA</button>
+  </div>
+
+  <header>
+    <h1 id="title">Український Вечір у Лодзі</h1>
+    <p id="description">Зустріч для дорослих громадян України, які проживають у Лодзі – бесіди, знайомства та дружня атмосфера.</p>
+
+  </header>
+
+  <!-- <img class="illustration" src="https://cdn.dribbble.com/users/330915/screenshots/14819541/media/6b8f2fc49f23b7608ae110cf7b0a7a29.png" alt="Ілюстрація зустрічі" /> -->
+
+  <div class="container">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="when">📍 Коли і де?</h2>
+      <div class="accordion-content">
+        <p><strong>Дата:</strong> 04.07.2025</p>
+        <p><strong>Час:</strong> 18:00 </p>
+        <p><strong>Місце:</strong> Łódż, Piotrkowska 243, Teatr DOM</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="program">🎬 Програма вечора</h2>
+      <div class="accordion-content">
+        <ul>
+          <li>Документальні фільми про культуру та традиції України</li>
+          <li>Народна музика та інтеграція</li>
+          <li>Чай, закуски та розмови</li>
+        </ul>
+      </div>
+    </div>
+ <div class="accordion-item">
+      <h2 class="accordion-header" id="who">🤝 Для кого?</h2>
+      <div class="accordion-content">
+        <p>Запрошуємо всіх дорослих громадян України, які проживають у Лодзі. Познайомимось, поспілкуємось!</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="kids">👶 Дитячий куточок</h2>
+      <div class="accordion-content">
+        <p>Ігри, розмальовки та догляд – щоб батьки могли спокійно брати участь у зустрічі.</p>
+      </div>
+    </div>
+
+   
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="contact">📩 Контакт</h2>
+      <div class="accordion-content">
+        <p><strong>Email:</strong> kontakt@twojaorganizacja.pl</p>
+        <p><strong>Телефон:</strong> +48 123 456 789</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 
+  </footer>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const headers = document.querySelectorAll(".accordion-header");
+      headers.forEach(header => {
+        header.addEventListener("click", () => {
+          const content = header.nextElementSibling;
+          header.classList.toggle("open");
+          content.classList.toggle("open");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
